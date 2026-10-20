@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174f46">
+    <title>Acervo · Controle patrimonial</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">a</span>
+        <span>
+          acervo
+          <span class="brand-sub">CONTROLE PATRIMONIAL</span>
+        </span>
+      </div>
+      <span class="local-tag">
+        <span aria-hidden="true">●</span>
+        Espaço local
+      </span>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">SEU PATRIMÔNIO, ORGANIZADO</p>
+          <h1>Bens patrimoniais</h1>
+          <p class="subtitle">Cada bem em seu lugar. Cada informação à mão.</p>
+        </div>
+        <button id="create" class="button primary">
+          <span aria-hidden="true">＋</span>
+          Cadastrar bem
+        </button>
+      </div>
+      <section class="metrics" aria-label="Resumo do patrimônio">
+        <article class="metric">
+          <p>Bens cadastrados</p>
+          <strong id="total-count">—</strong>
+          <span>Todos os registros</span>
+        </article>
+        <article class="metric">
+          <p>Em uso</p>
+          <strong id="active-count">—</strong>
+          <span>Ativos e em manutenção</span>
+        </article>
+        <article class="metric value-metric">
+          <p>Valor de aquisição em uso</p>
+          <strong id="total-value">—</strong>
+          <span>Sem incluir bens baixados</span>
+        </article>
+      </section>
+      <section class="inventory" aria-labelledby="inventory-title">
+        <div class="inventory-heading">
+          <h2 id="inventory-title">Inventário</h2>
+          <span id="result-count" class="muted"></span>
+        </div>
+        <div class="filters">
+          <div class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <label for="search" class="sr-only">Buscar bens</label>
+            <input type="search" id="search" placeholder="Buscar por identificação, descrição, local ou responsável" maxlength="500">
+          </div>
+          <div class="status-filter">
+            <label for="status-filter">Situação</label>
+            <select id="status-filter">
+              <option value="all">Todas as situações</option>
+              <option value="ativo">Ativo</option>
+              <option value="manutencao">Em manutenção</option>
+              <option value="baixado">Baixado</option>
+            </select>
+          </div>
+        </div>
+        <div id="load-error" class="notice error" hidden>
+          <span id="load-error-text"></span>
+          <button id="retry" class="button secondary">Tentar novamente</button>
+        </div>
+        <p id="loading" class="state" role="status">Carregando seus bens…</p>
+        <div id="empty" class="state" hidden>
+          <span class="empty-symbol" aria-hidden="true">▧</span>
+          <h3 id="empty-title">Seu inventário começa aqui</h3>
+          <p id="empty-text">Cadastre o primeiro bem para acompanhar seu patrimônio.</p>
+          <button id="empty-create" class="button secondary">Cadastrar primeiro bem</button>
+        </div>
+        <div id="table-wrap" class="table-wrap" hidden>
+          <table>
+            <caption class="sr-only">Bens patrimoniais cadastrados</caption>
+            <thead>
+              <tr>
+                <th scope="col">Bem / Identificação</th>
+                <th scope="col">Local / Responsável</th>
+                <th scope="col">Valor de aquisição</th>
+                <th scope="col">Situação</th>
+                <th scope="col">
+                  <span class="sr-only">Ações</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="asset-list"></tbody>
+          </table>
+        </div>
+        <div class="inventory-footer">Os registros de bens baixados permanecem no seu histórico.</div>
+      </section>
+      <footer class="page-footer">
+        <span>Acervo · Controle patrimonial</span>
+        <span>Informação organizada. Gestão mais simples.</span>
+      </footer>
+    </main>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <dialog id="asset-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow" id="dialog-eyebrow">PATRIMÔNIO</p>
+          <h2 id="dialog-title">Cadastrar bem</h2>
+        </div>
+        <button type="button" class="icon-button" id="close-dialog" aria-label="Fechar janela">×</button>
+      </div>
+      <div id="details" hidden></div>
+      <form id="asset-form">
+        <p class="form-intro">Todos os campos são obrigatórios.</p>
+        <div class="form-grid">
+          <label>
+            Identificação
+            <input name="identification" maxlength="80" placeholder="Ex.: PAT-001" required>
+          </label>
+          <label>
+            Situação
+            <select name="status" required>
+              <option value="ativo">Ativo</option>
+              <option value="manutencao">Em manutenção</option>
+              <option value="baixado" hidden>Baixado</option>
+            </select>
+          </label>
+          <label class="full">
+            Descrição
+            <textarea name="description" rows="3" maxlength="500" placeholder="Ex.: Notebook Dell Latitude, 16 GB" required></textarea>
+          </label>
+          <label>
+            Localização
+            <input name="location" maxlength="120" placeholder="Ex.: Escritório · Sala 02" required>
+          </label>
+          <label>
+            Responsável
+            <input name="responsible" maxlength="120" placeholder="Nome do responsável" required>
+          </label>
+          <label>
+            Valor de aquisição (R$)
+            <input name="value" type="number" min="0" max="999999999999.99" step="0.01" placeholder="0,00" required>
+          </label>
+          <label>
+            Data de aquisição
+            <input name="acquiredAt" type="date" min="0001-01-01" max="9999-12-31" required>
+          </label>
+        </div>
+        <p id="form-error" class="notice error" role="alert" hidden></p>
+        <div class="dialog-actions">
+          <button type="button" id="cancel-form" class="button secondary">Cancelar</button>
+          <button type="submit" class="button primary" id="save">Cadastrar bem</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="retire-dialog" aria-labelledby="retire-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">ENCERRAR USO</p>
+          <h2 id="retire-title">Dar baixa neste bem?</h2>
+        </div>
+        <button type="button" id="close-retire" class="icon-button" aria-label="Fechar confirmação">×</button>
+      </div>
+      <p id="retire-description"></p>
+      <p class="muted">O bem sairá do patrimônio em uso. Seu cadastro continuará disponível para consulta, com a situação “Baixado”.</p>
+      <p id="retire-error" role="alert" class="notice error" hidden></p>
+      <div class="dialog-actions">
+        <button id="cancel-retire" class="button secondary">Cancelar</button>
+        <button id="confirm-retire" class="button danger">Confirmar baixa</button>
+      </div>
+    </dialog>
+  </body>
+</html>

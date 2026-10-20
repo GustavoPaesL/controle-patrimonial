@@ -1,0 +1,70 @@
+# Inventário real e arquivos temporários de gravação
+/data/
+*.tmp
+
+# Dependências, caches e saídas geradas
+node_modules/
+.npm/
+.cache/
+coverage/
+.nyc_output/
+/dist/
+/build/
+chrome-qa-*/
+*.tsbuildinfo
+
+# Logs e diagnósticos locais
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Configuração privada; modelos de configuração podem ser versionados
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
+
+# Chaves, credenciais e configurações de autenticação locais
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+.aws/
+.ssh/
+.npmrc
+.netrc
+_netrc
+.git-credentials
+credentials.json
+credentials.*.json
+service-account*.json
+service_account*.json
+
+# Estado pessoal de ferramentas (preserva .codex/agents e .codex/skills)
+.codex/auth.json
+.codex/config.toml
+.codex/history.jsonl
+.codex/sessions/
+.codex/archived_sessions/
+.codex/log/
+.codex/tmp/
+.codex/*.sqlite*
+.codex/*.db*
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

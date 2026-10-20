@@ -1,0 +1,118 @@
+{
+  "checks": [
+    "empty state",
+    "initial focus and dialog",
+    "required native validation",
+    "create from UI",
+    "details contain fields",
+    "edit updates listing",
+    "accent insensitive search",
+    "status filter empty",
+    "brand and local tag within topbar at 320",
+    "brand and local tag within topbar at 768",
+    "mobile form actions accessible by scrolling",
+    "retire confirmation focus",
+    "cancel retire preserves status",
+    "retire retained in listing",
+    "retired details date and no repeat action",
+    "connection error and retry",
+    "retry recovers",
+    "desktop no horizontal page overflow",
+    "desktop labeled controls",
+    "mobile no horizontal page overflow",
+    "mobile labeled controls",
+    "width320 no horizontal page overflow",
+    "width320 labeled controls",
+    "width768 no horizontal page overflow",
+    "width768 labeled controls",
+    "mobileDetails no horizontal page overflow",
+    "mobileDetails labeled controls",
+    "mobileForm no horizontal page overflow",
+    "mobileForm labeled controls",
+    "no browser JS exceptions",
+    "UTF8 across chunk boundaries preserved",
+    "two decimal value preserved",
+    "extra decimal places rejected"
+  ],
+  "consoleErrors": [],
+  "requestFailures": [
+    {
+      "requestId": "1540.12",
+      "timestamp": 766752.021435,
+      "type": "Fetch",
+      "errorText": "net::ERR_INTERNET_DISCONNECTED",
+      "canceled": false
+    }
+  ],
+  "screenshots": [
+    "desktop-empty.png",
+    "desktop-form.png",
+    "desktop-inventory.png",
+    "mobile-inventory.png",
+    "inventory-320.png",
+    "inventory-768.png",
+    "mobile-details.png",
+    "mobile-form.png",
+    "mobile-form-actions.png",
+    "mobile-retire.png",
+    "mobile-error.png"
+  ],
+  "lint": {
+    "desktop": {
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    },
+    "mobile": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    },
+    "width320": {
+      "viewport": 320,
+      "documentWidth": 320,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    },
+    "width768": {
+      "viewport": 768,
+      "documentWidth": 768,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    },
+    "mobileDetails": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    },
+    "mobileForm": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [],
+      "missingAlt": 0
+    }
+  },
+  "failedChecks": [],
+  "verdict": "APROVADO"
+}

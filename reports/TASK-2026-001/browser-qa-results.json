@@ -1,0 +1,347 @@
+{
+  "checks": [
+    "empty state",
+    "initial focus and dialog",
+    "required native validation",
+    "create from UI",
+    "details contain fields",
+    "edit updates listing",
+    "accent insensitive search",
+    "status filter empty",
+    "retire confirmation focus",
+    "cancel retire preserves status",
+    "retire retained in listing",
+    "retired details date and no repeat action",
+    "connection error and retry",
+    "retry recovers",
+    "desktop no horizontal page overflow",
+    "desktop labeled controls",
+    "mobile no horizontal page overflow",
+    "mobile labeled controls",
+    "mobileDetails no horizontal page overflow",
+    "mobileDetails labeled controls",
+    "mobileForm no horizontal page overflow",
+    "mobileForm labeled controls",
+    "no browser JS exceptions",
+    "UTF8 across chunk boundaries preserved",
+    "two decimal value preserved",
+    "extra decimal places rejected"
+  ],
+  "consoleErrors": [],
+  "requestFailures": [
+    {
+      "requestId": "11004.12",
+      "timestamp": 759739.30138,
+      "type": "Fetch",
+      "errorText": "net::ERR_INTERNET_DISCONNECTED",
+      "canceled": false
+    }
+  ],
+  "screenshots": [
+    "desktop-empty.png",
+    "desktop-form.png",
+    "desktop-inventory.png",
+    "mobile-inventory.png",
+    "mobile-details.png",
+    "mobile-form.png",
+    "mobile-retire.png",
+    "mobile-error.png"
+  ],
+  "lint": {
+    "desktop": {
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "tiny": [
+        {
+          "text": "CONTROLE PATRIMONIAL",
+          "size": "9px"
+        },
+        {
+          "text": "●",
+          "size": "9px"
+        },
+        {
+          "text": "SEU PATRIMÔNIO, ORGANIZADO",
+          "size": "10px"
+        },
+        {
+          "text": "Bem / Identificação",
+          "size": "10px"
+        },
+        {
+          "text": "Local / Responsável",
+          "size": "10px"
+        },
+        {
+          "text": "Valor de aquisição",
+          "size": "10px"
+        },
+        {
+          "text": "Situação",
+          "size": "10px"
+        },
+        {
+          "text": "Ações",
+          "size": "10px"
+        },
+        {
+          "text": "Ativo",
+          "size": "11px"
+        },
+        {
+          "text": "Os registros de bens baixados permanecem no seu histórico.",
+          "size": "11px"
+        },
+        {
+          "text": "Acervo · Controle patrimonial",
+          "size": "11px"
+        },
+        {
+          "text": "Informação organizada. Gestão mais simples.",
+          "size": "11px"
+        }
+      ],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [
+        {
+          "text": "Sem incluir bens baixados",
+          "ratio": 4.449222108342618,
+          "required": 4.5
+        }
+      ],
+      "missingAlt": 0
+    },
+    "mobile": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [
+        {
+          "text": "CONTROLE PATRIMONIAL",
+          "size": "8px"
+        },
+        {
+          "text": "● Espaço local",
+          "size": "10px"
+        },
+        {
+          "text": "●",
+          "size": "9px"
+        },
+        {
+          "text": "SEU PATRIMÔNIO, ORGANIZADO",
+          "size": "10px"
+        },
+        {
+          "text": "Todos os registros",
+          "size": "11px"
+        },
+        {
+          "text": "Ativos e em manutenção",
+          "size": "11px"
+        },
+        {
+          "text": "Sem incluir bens baixados",
+          "size": "11px"
+        },
+        {
+          "text": "Em manutenção",
+          "size": "10px"
+        },
+        {
+          "text": "Ver detalhes →",
+          "size": "11px"
+        },
+        {
+          "text": "Os registros de bens baixados permanecem no seu histórico.",
+          "size": "11px"
+        },
+        {
+          "text": "Acervo · Controle patrimonial",
+          "size": "11px"
+        },
+        {
+          "text": "Informação organizada. Gestão mais simples.",
+          "size": "11px"
+        }
+      ],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [
+        {
+          "text": "Sem incluir bens baixados",
+          "ratio": 4.449222108342618,
+          "required": 4.5
+        }
+      ],
+      "missingAlt": 0
+    },
+    "mobileDetails": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [
+        {
+          "text": "CONTROLE PATRIMONIAL",
+          "size": "8px"
+        },
+        {
+          "text": "● Espaço local",
+          "size": "10px"
+        },
+        {
+          "text": "●",
+          "size": "9px"
+        },
+        {
+          "text": "SEU PATRIMÔNIO, ORGANIZADO",
+          "size": "10px"
+        },
+        {
+          "text": "Todos os registros",
+          "size": "11px"
+        },
+        {
+          "text": "Ativos e em manutenção",
+          "size": "11px"
+        },
+        {
+          "text": "Sem incluir bens baixados",
+          "size": "11px"
+        },
+        {
+          "text": "Em manutenção",
+          "size": "10px"
+        },
+        {
+          "text": "Ver detalhes →",
+          "size": "11px"
+        },
+        {
+          "text": "Os registros de bens baixados permanecem no seu histórico.",
+          "size": "11px"
+        },
+        {
+          "text": "Acervo · Controle patrimonial",
+          "size": "11px"
+        },
+        {
+          "text": "Informação organizada. Gestão mais simples.",
+          "size": "11px"
+        },
+        {
+          "text": "PAT-QA-001",
+          "size": "10px"
+        },
+        {
+          "text": "Descrição",
+          "size": "11px"
+        },
+        {
+          "text": "Localização",
+          "size": "11px"
+        },
+        {
+          "text": "Responsável",
+          "size": "11px"
+        },
+        {
+          "text": "Valor de aquisição",
+          "size": "11px"
+        },
+        {
+          "text": "Data de aquisição",
+          "size": "11px"
+        },
+        {
+          "text": "Situação",
+          "size": "11px"
+        }
+      ],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [
+        {
+          "text": "Sem incluir bens baixados",
+          "ratio": 4.449222108342618,
+          "required": 4.5
+        }
+      ],
+      "missingAlt": 0
+    },
+    "mobileForm": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "tiny": [
+        {
+          "text": "CONTROLE PATRIMONIAL",
+          "size": "8px"
+        },
+        {
+          "text": "● Espaço local",
+          "size": "10px"
+        },
+        {
+          "text": "●",
+          "size": "9px"
+        },
+        {
+          "text": "SEU PATRIMÔNIO, ORGANIZADO",
+          "size": "10px"
+        },
+        {
+          "text": "Todos os registros",
+          "size": "11px"
+        },
+        {
+          "text": "Ativos e em manutenção",
+          "size": "11px"
+        },
+        {
+          "text": "Sem incluir bens baixados",
+          "size": "11px"
+        },
+        {
+          "text": "Em manutenção",
+          "size": "10px"
+        },
+        {
+          "text": "Ver detalhes →",
+          "size": "11px"
+        },
+        {
+          "text": "Os registros de bens baixados permanecem no seu histórico.",
+          "size": "11px"
+        },
+        {
+          "text": "Acervo · Controle patrimonial",
+          "size": "11px"
+        },
+        {
+          "text": "Informação organizada. Gestão mais simples.",
+          "size": "11px"
+        },
+        {
+          "text": "PAT-QA-001",
+          "size": "10px"
+        }
+      ],
+      "overflow": [],
+      "unlabeled": [],
+      "contrast": [
+        {
+          "text": "Sem incluir bens baixados",
+          "ratio": 4.449222108342618,
+          "required": 4.5
+        }
+      ],
+      "missingAlt": 0
+    }
+  },
+  "failedChecks": [
+    "desktop contrast >= WCAG AA",
+    "mobile contrast >= WCAG AA",
+    "mobileDetails contrast >= WCAG AA",
+    "mobileForm contrast >= WCAG AA"
+  ],
+  "verdict": "REPROVADO"
+}
